@@ -3,76 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foodpanda-like Navbar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://www.foodpanda.com/wp-content/uploads/2023/06/foodpanda_logo_2023.svg">
 </head>
 <body>
-    <h1>Food Panda Milestone Assignment</h1>
-    <img src="fplogo.png" alt="" width="50px">
-    <mnav>
-    <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#newsroom">News</a></li>
-  <li><a href="#partners">Partners</a></li>
-  <li><a href="#pandaads">Panda ads</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#careers">Careers</a></li>
-  <li><a href="#chooselocation">Chooselocation</a></li>
-</ul>
-<a href="padd.html"> Panda Adds</a>
-<a href="pcar.html"> Panda Careers</a>
-<div class="row">
-            <article class="content">
-                <h2>foodpanda</h2>
-                <P>food and groceries in  tap</P>
-                <P>We’re here to help you </P>
+    <!-- Main Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="#">
+                    <img src="https://www.foodpanda.com/wp-content/uploads/2023/06/foodpanda_logo_2023.svg" alt="foodpanda logo">
+                </a>
+            </div>
 
-                <p> live life the panda way.</p>
-                 <p>Spend more time doing what you love </p>
-                 <p>we’ll take care of tasty meals, fresh </p>
-                 <p> groceries and new flavours.</P>
-                <img src="pandaimg3.jpg" alt="" width="50px">
-                <p>Find the job you’d love</p>
-                <img src="pandaimg4.jpg" alt="" width="50px">
-            </article>
-            <aside class="sidebar">
-                <h3>Meet the next</h3>
-                <P>generation of delievery</P>
-                <p>Taste the convenience.</p>
-                
-            </aside>
+            <!-- Location Selector -->
+            <div class="location-selector">
+                <div class="location-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-text">
+                    <div class="deliver-to">Deliver to</div>
+                    <div class="current-location">
+                        <span class="location-name">Current Location</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search for restaurants or dishes">
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <a href="#" class="action-link">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </a>
+                <a href="#" class="action-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="action-link lang-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+    </nav>
 
-
-<footer>
-      
-    
-<div class="footer-widget"> 
-<ul>
-    <li><a href="">Navigate</a> </li> 
-    <li><a href="">Home</a> </li> 
-    <li><a href="">About</a> </li> 
-     <li><a href="">contact</a> </li> 
-     <li><a href="">Newsroom</a> </li>
-     </ul> 
+    <!-- Secondary Navbar -->
+    <div class="secondary-nav">
+        <div class="secondary-nav-container">
+            <a href="#" class="nav-link active">Delivery</a>
+            <a href="#" class="nav-link">Pickup</a>
+            <a href="#" class="nav-link">Dine-in</a>
+            <a href="#" class="nav-link">Pandamart</a>
+            <a href="#" class="nav-link">Shops</a>
+            <a href="#" class="nav-link">Catering</a>
+            <a href="#" class="nav-link">Business</a>
+        </div>
     </div>
-    
-        <div>
-    <br>
-    <br>
-    <br>
-Follow us on
-<br>
-<i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-github"></i>
-    <i class="fa-brands fa-linkedin"></i>
-</div>
 
-        </mnav>
-<script src="script.js"></script>
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-items">
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-motorcycle"></i>
+                <span>Delivery</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-store"></i>
+                <span>Pickup</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Dine-in</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-shopping-basket"></i>
+                <span>Pandamart</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart (0)</span>
+            </a>
+            <a href="#" class="mobile-menu-item">
+                <i class="fas fa-globe"></i>
+                <span>Language: English</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1>Food Delivery Service</h1>
+            <p>This is a demo page with a Foodpanda-like navbar. The navbar is fully responsive and includes all the key elements of the Foodpanda interface.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered in minutes with our fast delivery service.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Wide Selection</h3>
+                    <p>Choose from hundreds of restaurants and thousands of dishes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe Delivery</h3>
+                    <p>Contactless delivery options for your safety and convenience.</p>
+                </div>
+            </div>
+            
+            <h2>How It Works</h2>
+            <ol class="how-it-works">
+                <li>Select your delivery location using the location selector in the navbar</li>
+                <li>Browse restaurants or search for specific dishes</li>
+                <li>Add items to your cart</li>
+                <li>Checkout and track your order in real-time</li>
+            </ol>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Foodpanda-like Navbar Demo &copy; 2023 | Created with HTML & CSS</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
